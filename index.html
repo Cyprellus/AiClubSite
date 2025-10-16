@@ -3,74 +3,75 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Club – Home</title>
+  <title>Java Tutoring with Katrina</title>
+
+  <!-- Flatpickr styles (can be removed if unused elsewhere) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Poppins&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
-<script>
-  let lastScrollTop = 0;
-  const nav = document.querySelector("nav");
-
-  window.addEventListener("scroll", () => {
-    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-    if (scrollTop > lastScrollTop) {
-      // Scrolling down
-      nav.classList.add("hidden");
-    } else {
-      // Scrolling up
-      nav.classList.remove("hidden");
-    }
-
-    lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // For mobile or negative scroll
-  });
-</script>
-
 <body>
-  <nav class="glass">
-    <div class="logo">Greenriver Community College Presents: AI Club</div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="#events">Events</a></li>
-      <li><a href="#projects">Projects</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-
-  <section class="hero-section">
-    <div class="hero-content glass" data-aos="fade-up">
-      <h1>Welcome to AI Club</h1>
-      <p>Exploring the future, one algorithm at a time.</p>
+  <!-- Time-based background container -->
+  <div id="background" class="background">
+    <div class="cloud-layer">
+      <img src="cloud.png" class="cloud cloud-front" />
+      <img src="cloud.png" class="cloud cloud-mid" />
+      <img src="cloud.png" class="cloud cloud-back" />
+      <img src="cloud.png" class="cloud cloud-front" />
+      <img src="cloud.png" class="cloud cloud-mid" />
+      <img src="cloud.png" class="cloud cloud-back" />
     </div>
+  </div>
+
+  <!-- Header -->
+  <header class="glass-card jelly">
+    <h1>Java Tutoring with Katrina</h1>
+    <p><a href="mailto:Wilkerson.katrina@student.greenriver.edu">Wilkerson.katrina@student.greenriver.edu</a></p>
+  </header>
+
+  <!-- Availability -->
+  <section class="glass-card jelly">
+    <h2>Availability</h2>
+    <p>Monday–Thursday, 11:00 AM – 1:00 PM</p>
   </section>
 
-  <section class="section glass" data-aos="fade-right">
-    <h2>What We Do</h2>
-    <p>We host workshops, build projects, compete against one another in Hack-a-thons and connect with tech leaders to explore artificial intelligence and machine learning.</p>
+  <!-- Pricing -->
+  <section class="glass-card jelly">
+    <h2>Pricing</h2>
+    <ul>
+      <li>First session: <strong>Free</strong></li>
+      <li>Each additional 1-hour session: <strong>$15</strong></li>
+    </ul>
   </section>
 
-  <section class="section glass" data-aos="fade-left">
-    <h2>Join Us</h2>
-    <p>Auburn Campus Technical Center (TC) Room 120 • Thursdays @ 3:30 PM</p>
-    <p>All majors and skill levels are welcome!</p>
-    <p>📧 <a href="mailto:Hoang.Viet.2@Student.greenriver.edu">Hoang.Viet.2@Student.Greenriver.edu</a> – President of AI Club</p>
-    <p>📧 <a href="mailto:RGill@greenriver.edu">RGill@greenriver.edu</a> – Supervisor</p>
-    <p>📧 <a href="mailto:Katrina.Wilkerson@Student.Greenriver.edu">Katrina.Wilkerson@Student.Greenriver.edu</a> – Head of AI and Development</p>
+  <!-- Signup Form -->
+  <section class="glass-card jelly" style="overflow-y: auto; max-height: 650px;">
+    <h2>Sign Up</h2>
+    <p>Fill out the form below to request a tutoring session:</p>
+    <iframe 
+      src="https://forms.gle/xGR8zqCkSMBd9gSj8" 
+      style="border: 0; width: 100%; height: 600px;" 
+      frameborder="0" 
+      scrolling="yes">
+      Loading…
+    </iframe>
   </section>
 
-  <footer class="footer glass" data-aos="fade-up">
-    <p>© 2025 Greenriver AI Club Fall Quarter</p>
-  </footer>
+  <!-- Tutoring Calendar -->
+  <section class="glass-card jelly">
+    <h2>My Tutoring Calendar</h2>
+    <iframe 
+      src="https://calendar.google.com/calendar/embed?src=52969672782be8b3f4f2e18178ec9fdc6384499ea05bafb851c6d033e950680d%40group.calendar.google.com&ctz=America%2FLos_Angeles" 
+      style="border: 0; width: 100%; height: 600px;" 
+      frameborder="0" 
+      scrolling="yes">
+    </iframe>
+  </section>
 
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      offset: 100,
-      delay: 0,
-      duration: 600,
-    });
+  <!-- Scripts -->
+  <script src="auth.js"></script>
+  <script type="module">
+    import { applyTheme } from './theme.js';
+    applyTheme();
   </script>
 </body>
 </html>
